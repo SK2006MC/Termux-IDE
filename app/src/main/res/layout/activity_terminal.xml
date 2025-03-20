@@ -5,8 +5,9 @@
 	android:orientation="vertical">
 
 	<com.termux.view.TerminalView
-		android:id="@+id/terminalView"
+		android:id="@+id/terminal_view"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent" />
+		android:layout_height="match_parent"
+		android:scrollbars="vertical" />
 
 </LinearLayout>

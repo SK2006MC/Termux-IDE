@@ -127,10 +127,10 @@ public class SettingsManager {
 	}
 
 	public boolean getIsFirst() {
-		return prefs.getBoolean(KEY_IS_FIRST,false);
+		return prefs.getBoolean(KEY_IS_FIRST, false);
 	}
 
-	public void putIsFirst(boolean b){
-		prefs.edit().putBoolean(KEY_IS_FIRST,b).apply();
+	public void putIsFirst(boolean b) {
+		prefs.edit().putBoolean(KEY_IS_FIRST, b).apply();
 	}
 }

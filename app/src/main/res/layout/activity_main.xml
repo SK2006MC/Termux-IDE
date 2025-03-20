@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:background="@drawable/ic_launcher_background"
 	android:gravity="center"
 	android:orientation="vertical">
 
@@ -8,7 +9,8 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginBottom="30dp"
-		android:text="XIDE"
+		android:text="@string/xide"
+		android:textAppearance="@style/TextAppearance.AppCompat.Medium"
 		android:textSize="30sp" />
 
 	<LinearLayout
@@ -20,37 +22,37 @@
 			android:id="@+id/file_manager"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="File Manager" />
+			android:text="@string/file_manager" />
 
 		<Button
 			android:id="@+id/ide"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="IDE" />
+			android:text="@string/ide" />
 
 		<Button
 			android:id="@+id/terminal"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Terminal" />
+			android:text="@string/terminal" />
 
 		<Button
 			android:id="@+id/code_editor"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Code Editor" />
+			android:text="@string/code_editor" />
 
 		<Button
 			android:id="@+id/projects"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Projects" />
+			android:text="@string/projects" />
 
 		<Button
 			android:id="@+id/exit"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Exit" />
+			android:text="@string/exit" />
 
 	</LinearLayout>
 

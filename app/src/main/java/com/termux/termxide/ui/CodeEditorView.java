@@ -17,9 +17,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatEditText;
 
 public class CodeEditorView extends AppCompatEditText {
-	private static final int LINE_NUMBER_WIDTH = 40; // Width for line numbers
-	private static final int GUTTER_PADDING = 8; // Padding between line numbers and text
-
+	private static final int LINE_NUMBER_WIDTH = 40;
+	private static final int GUTTER_PADDING = 8;
 	private Paint lineNumberPaint;
 	private Paint gutterPaint;
 	private Rect lineNumberBounds;

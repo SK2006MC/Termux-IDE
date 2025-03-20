@@ -17,20 +17,20 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		settingsManager = new SettingsManager(this);
 
-		 if (settingsManager.getIsFirst()) {
-		 	startMyActivity(FirstActivity.class);
-		 	finish();
-		 }
+		if (settingsManager.getIsFirst()) {
+			startMyActivity(FirstActivity.class);
+			finish();
+		}
 
 		binding = ActivityMainBinding.inflate(getLayoutInflater());
 		setContentView(binding.getRoot());
 
-		binding.fileManager.setOnClickListener(v->startMyActivity(FileManagerActivity.class));
-		binding.codeEditor.setOnClickListener(v->startMyActivity(CodeEditorActivity.class));
-		binding.ide.setOnClickListener(v->startMyActivity(IdeActivity.class));
-		binding.projects.setOnClickListener(v->startMyActivity(ProjectsActivity.class));
-		binding.terminal.setOnClickListener(v->startMyActivity(TerminalActivity.class));
-		binding.exit.setOnClickListener(v->finish());
+		binding.fileManager.setOnClickListener(v -> startMyActivity(FileManagerActivity.class));
+		binding.codeEditor.setOnClickListener(v -> startMyActivity(CodeEditorActivity.class));
+		binding.ide.setOnClickListener(v -> startMyActivity(IdeActivity.class));
+		binding.projects.setOnClickListener(v -> startMyActivity(ProjectsActivity.class));
+		binding.terminal.setOnClickListener(v -> startMyActivity(TerminalActivity.class));
+		binding.exit.setOnClickListener(v -> finish());
 
 		initOnBackPressB(new OnBackPressedCallback(true) {
 			@Override
@@ -39,6 +39,4 @@ public class MainActivity extends BaseActivity {
 			}
 		});
 	}
-
-
 }

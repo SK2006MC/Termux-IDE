@@ -6,20 +6,18 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.termux.termxide.databinding.ActivityFirstBinding;
 import com.termux.termxide.managers.SettingsManager;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
 	private static final int REQUEST_CODE_PICK_FOLDER = 101;
 	private static final int PERMISSION_REQUEST_STORAGE = 102;
@@ -47,7 +45,7 @@ public class FirstActivity extends AppCompatActivity {
 						// Handle picked folder URI
 						Uri folderUri = result.getData().getData();
 						if (folderUri != null) {
-							Toast.makeText(this, "Folder selected: " + folderUri.toString(), Toast.LENGTH_SHORT).show();
+							alert("Folder selected: " + folderUri.toString());
 							// Persist permission if needed
 							final int takeFlags = result.getData().getFlags()
 									& (Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
@@ -56,7 +54,7 @@ public class FirstActivity extends AppCompatActivity {
 							settingsManager.setHomePath(folderUri.toString());
 						}
 					} else {
-						Toast.makeText(this, "No folder selected", Toast.LENGTH_SHORT).show();
+						alert("No folder selected");
 					}
 				}
 		);
@@ -76,7 +74,7 @@ public class FirstActivity extends AppCompatActivity {
 					ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_STORAGE);
 				}
 			} else {
-				Toast.makeText(this, "Permission already granted", Toast.LENGTH_SHORT).show();
+				alert("Permission already granted");
 				binding.btnStart.setEnabled(true);
 			}
 		});
@@ -109,10 +107,10 @@ public class FirstActivity extends AppCompatActivity {
 		super.onRequestPermissionsResult(requestCode, permission, grantResults);
 		if (requestCode == PERMISSION_REQUEST_STORAGE) {
 			if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-				Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show();
+				alert("Permission Granted");
 				binding.btnStart.setEnabled(true);
 			} else {
-				Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
+				alert("Permission Denied");
 				binding.btnStart.setEnabled(false);
 				finish();
 			}

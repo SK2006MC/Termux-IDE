@@ -4,14 +4,14 @@
 	android:layout_height="wrap_content"
 	android:gravity="center_vertical"
 	android:orientation="horizontal"
-	android:padding="12dp">
+	android:padding="6dp">
 
 	<!-- File Icon -->
 	<ImageView
 		android:id="@+id/imageView_icon"
-		android:layout_width="40dp"
-		android:layout_height="40dp"
-		android:layout_marginEnd="12dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="5dp"
 		android:contentDescription="@string/file_icon"
 		android:src="@drawable/baseline_insert_drive_file_24" />
 
@@ -28,16 +28,15 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:ellipsize="end"
-			android:maxLines="1"
+			android:maxLines="2"
 			android:text="FileName.txt"
-			android:textSize="16sp"
+			android:textSize="10sp"
 			android:textStyle="bold" />
 
 		<!-- File Time and Size Row -->
 		<LinearLayout
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginTop="4dp"
 			android:orientation="horizontal">
 
 			<!-- Time of Creation -->
@@ -46,8 +45,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="2024-07-01 10:00"
-				android:textColor="#888888"
-				android:textSize="12sp" />
+				android:textSize="8sp" />
 
 			<!-- Separator Dot -->
 			<TextView
@@ -56,8 +54,7 @@
 				android:paddingStart="4dp"
 				android:paddingEnd="4dp"
 				android:text=" • "
-				android:textColor="#888888"
-				android:textSize="12sp" />
+				android:textSize="8sp" />
 
 			<!-- File Size -->
 			<TextView
@@ -65,8 +62,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="1.2 MB"
-				android:textColor="#888888"
-				android:textSize="12sp" />
+				android:textSize="8sp" />
 		</LinearLayout>
 	</LinearLayout>
 </LinearLayout>

@@ -4,9 +4,9 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical">
 
-	<com.termux.view.TerminalView
-		android:id="@+id/terminalView"
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/projectsList"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent" />
+		android:layout_height="wrap_content" />
 
 </LinearLayout>

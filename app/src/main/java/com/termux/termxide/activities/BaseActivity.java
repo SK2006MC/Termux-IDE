@@ -10,9 +10,9 @@ import com.termux.termxide.TermXIDE;
 
 public class BaseActivity extends AppCompatActivity {
 
-	String TAG = this.getClass().getSimpleName();
+	protected String TAG = this.getClass().getSimpleName();
 
-	public void initOnBackPressB(OnBackPressedCallback callback) {
+	protected void initOnBackPressB(OnBackPressedCallback callback) {
 		getOnBackPressedDispatcher().addCallback(callback);
 	}
 
@@ -24,11 +24,11 @@ public class BaseActivity extends AppCompatActivity {
 //		return
 //	}
 
-	void startMyActivity(Class<?> activityClass) {
+	protected void startMyActivity(Class<?> activityClass) {
 		startActivity(new Intent(this, activityClass));
 	}
 
-	void alert(String message) {
+	protected void alert(String message) {
 		Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 	}
 }
