@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_vertical"
+	android:orientation="horizontal">
+
+	<TextView
+		android:id="@+id/logLevelTextView"
+		android:layout_width="10sp"
+		android:layout_height="match_parent"
+		android:text="L" />
+
+	<TextView
+		android:id="@+id/timeStampTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="time"/>
+
+	<TextView
+		android:id="@+id/tagTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Tag" />
+
+	<TextView
+		android:id="@+id/msgTextView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="message" />
+
+</LinearLayout>

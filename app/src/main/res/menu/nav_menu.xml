@@ -1,0 +1,19 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item
+		android:id="@+id/refresh"
+		android:icon="@drawable/baseline_refresh_24"
+		android:title="@string/refresh"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/nav_settings"
+		android:title="@string/settings" />
+	<item
+		android:id="@+id/nav_logs"
+		android:title="@string/title_log" />
+	<item
+		android:id="@+id/nav_about"
+		android:title="@string/about" />
+
+</menu>

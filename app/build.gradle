@@ -1,0 +1,82 @@
+plugins {
+	id 'com.android.application'
+}
+
+android {
+	namespace 'com.termux.termxide'
+	compileSdk 35
+
+	defaultConfig {
+		applicationId "com.termux.termxide"
+		minSdk 27
+		targetSdk 34
+		versionCode 1
+		versionName "1.0"
+
+		manifestPlaceholders.TERMUX_PACKAGE_NAME = "com.termux"
+		manifestPlaceholders.TERMUX_APP_NAME = "Termux"
+
+		vectorDrawables {
+			useSupportLibrary true
+		}
+	}
+
+	signingConfigs {
+		debug {
+			storeFile file('testkey_untrusted.jks')
+			keyAlias 'alias'
+			storePassword 'xrj45yWGLbsO7W0v'
+			keyPassword 'xrj45yWGLbsO7W0v'
+		}
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled true
+			shrinkResources false // Reproducible builds
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+
+		debug {
+			signingConfig signingConfigs.debug
+			zipAlignEnabled true
+		}
+	}
+
+	compileOptions {
+		coreLibraryDesugaringEnabled true
+		sourceCompatibility JavaVersion.VERSION_11
+		targetCompatibility JavaVersion.VERSION_11
+	}
+
+	buildFeatures {
+		viewBinding true
+	}
+
+	dependenciesInfo {
+		includeInApk true
+		includeInBundle true
+	}
+	
+	packagingOptions {
+        // Remove terminal-shared JNI libs added via termux-shared dependency
+        exclude "lib/*/liblocal-socket.so"
+    }
+
+	buildToolsVersion '36.0.0 rc4'
+}
+
+dependencies {
+	coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:1.1.5"
+    implementation "com.termux.termux-app:termux-shared:9ee1c9d5ad"
+    implementation "com.termux.termux-app:terminal-view:9ee1c9d5ad"
+	testImplementation "junit:junit:4.13.2"
+
+	implementation 'androidx.appcompat:appcompat:1.7.0'
+	implementation 'androidx.annotation:annotation:1.9.1'
+	implementation 'com.google.android.material:material:1.12.0'
+	implementation 'androidx.preference:preference:1.2.1'
+	implementation "com.squareup.okhttp3:okhttp:4.12.0"
+
+	implementation "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+}
