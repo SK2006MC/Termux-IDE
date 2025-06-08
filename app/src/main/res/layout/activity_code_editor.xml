@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<!-- Toolbar -->
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<!-- Main Content -->
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<!-- Code Editor -->
+		<com.termux.termxide.ui.CodeEditorView
+			android:id="@+id/codeEditor"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			app:layout_constraintBottom_toTopOf="@id/bottomToolbar"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<!-- Bottom Toolbar -->
+		<com.google.android.material.bottomappbar.BottomAppBar
+			android:id="@+id/bottomToolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:layout_gravity="bottom"
+			app:fabAlignmentMode="center"
+			app:hideOnScroll="true"
+			app:layout_constraintBottom_toBottomOf="parent">
+
+			<androidx.appcompat.widget.Toolbar
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+
+		</com.google.android.material.bottomappbar.BottomAppBar>
+
+		<!-- Floating Action Buttons -->
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:id="@+id/fabSave"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="16dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:srcCompat="@drawable/baseline_save_24" />
+
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:id="@+id/fabUndo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="16dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:srcCompat="@drawable/baseline_undo_24" />
+
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:id="@+id/fabRedo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="16dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toEndOf="@id/fabUndo"
+			app:srcCompat="@drawable/baseline_redo_24" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

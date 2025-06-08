@@ -57,19 +57,19 @@ android {
 		includeInApk true
 		includeInBundle true
 	}
-	
+
 	packagingOptions {
-        // Remove terminal-shared JNI libs added via termux-shared dependency
-        exclude "lib/*/liblocal-socket.so"
-    }
+		// Remove terminal-shared JNI libs added via termux-shared dependency
+		exclude "lib/*/liblocal-socket.so"
+	}
 
 	buildToolsVersion '36.0.0 rc4'
 }
 
 dependencies {
 	coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:1.1.5"
-    implementation "com.termux.termux-app:termux-shared:9ee1c9d5ad"
-    implementation "com.termux.termux-app:terminal-view:9ee1c9d5ad"
+	implementation "com.termux.termux-app:termux-shared:9ee1c9d5ad"
+	implementation "com.termux.termux-app:terminal-view:9ee1c9d5ad"
 	testImplementation "junit:junit:4.13.2"
 
 	implementation 'androidx.appcompat:appcompat:1.7.0'

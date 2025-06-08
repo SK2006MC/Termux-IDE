@@ -5,12 +5,11 @@
 	android:layout_height="match_parent"
 	tools:context=".fragments.FileViewFragment">
 
-	<include
-		layout="@layout/item_file"/>
+	<include layout="@layout/item_file" />
 
 	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/filesView"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:id="@+id/filesView"/>
+		android:layout_height="match_parent" />
 
 </FrameLayout>

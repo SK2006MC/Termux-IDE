@@ -51,4 +51,23 @@
 	<string name="run">Run</string>
 	<string name="save">Save</string>
 	<string name="exit">Exit</string>
+	<string name="undo">Undo</string>
+	<string name="help">Help</string>
+	<string name="redo">Redo</string>
+	<string name="find">Find</string>
+	<string name="replace">Replace</string>
+	<string name="logs">Logs</string>
+	<string name="find_and_replace">Find and Replace</string>
+	<string name="find_in_files">Find in Files</string>
+	<string name="replace_in_files">Replace in Files</string>
+	<string name="find_in_project">Find in Project</string>
+	<string name="replace_in_project">Replace in Project</string>
+	<string name="find_in_workspace">Find in Workspace</string>
+	<string name="replace_in_workspace">Replace in Workspace</string>
+	<string name="find_in_all_files">Find in All Files</string>
+	<string name="replace_in_all_files">Replace in All Files</string>
+	<string name="find_in_current_file">Find in Current File</string>
+	<string name="replace_in_current_file">Replace in Current File</string>
+	<string name="find_in_current_directory">Find in Current Directory</string>
+	<string name="replace_in_current_directory">Replace in Current Directory</string>
 </resources>

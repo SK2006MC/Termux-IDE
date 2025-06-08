@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
+	android:sharedUserId="${TERMUX_PACKAGE_NAME}"
 	android:versionCode="1"
 	android:versionName="1.0"
-	android:sharedUserId="${TERMUX_PACKAGE_NAME}"
 	tools:ignore="Deprecated">
 
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -36,12 +36,16 @@
 			</intent-filter>
 		</activity>
 
-		<activity android:name=".activities.LogActivity"/>
-		<activity android:name=".activities.FirstActivity"/>
-		<activity android:name=".activities.AboutActivity"/>
+		<activity android:name=".activities.LogActivity" />
+		<activity android:name=".activities.FirstActivity" />
+		<activity android:name=".activities.AboutActivity" />
 		<activity android:name=".activities.SettingsActivity" />
-		<activity android:name=".activities.FileManagerActivity"/>
-		<activity android:name=".activities.IdeActivity"/>
+		<activity android:name=".activities.FileManagerActivity" />
+		<activity android:name=".activities.IdeActivity" />
+		<activity android:name=".activities.CodeEditorActivity" />
+		<activity android:name=".activities.ProjectsActivity" />
+		<activity android:name=".activities.TerminalActivity" />
+
 
 	</application>
 

@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+		android:id="@+id/action_undo"
+		android:icon="@drawable/baseline_undo_24"
+		android:title="@string/undo"
+		app:showAsAction="ifRoom" />
+
+	<item
+		android:id="@+id/action_redo"
+		android:icon="@drawable/baseline_redo_24"
+		android:title="@string/redo"
+		app:showAsAction="ifRoom" />
+
+	<item
+		android:id="@+id/action_settings"
+		android:icon="@drawable/baseline_settings_24"
+		android:title="@string/settings"
+		app:showAsAction="ifRoom" />
+
+	<item
+		android:id="@+id/action_replace"
+		android:icon="@drawable/baseline_refresh_24"
+		android:title="@string/replace"
+		app:showAsAction="ifRoom" />
+
+	<item
+		android:id="@+id/action_search"
+		android:icon="@drawable/baseline_search_24"
+		android:title="@string/replace"
+		app:showAsAction="ifRoom" />
+
+</menu>

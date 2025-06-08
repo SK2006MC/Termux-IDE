@@ -1,11 +1,5 @@
 package com.termux.termxide.log;
 
-import android.os.FileUtils;
-
-import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
@@ -16,7 +10,7 @@ public class LoggerHelper {
 	private final ExecutorService loggingExecutor;
 
 	public LoggerHelper(android.content.Context context, String rootPath) {
-		this.myfileLogger = new FileLogger( rootPath , "log.txt");
+		this.myfileLogger = new FileLogger(rootPath, "log.txt");
 		this.loggingExecutor = Executors.newSingleThreadExecutor(new LoggingThreadFactory());
 	}
 

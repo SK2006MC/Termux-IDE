@@ -1,12 +1,12 @@
 package com.termux.termxide.log;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -16,8 +16,8 @@ public class FileLogger {
 	public final String filePath;
 	private BufferedWriter writer;
 
-	public FileLogger(String parent,String name){
-		File file = new File(parent,name);
+	public FileLogger(String parent, String name) {
+		File file = new File(parent, name);
 		this.filePath = file.getAbsolutePath();
 
 	}
@@ -27,8 +27,8 @@ public class FileLogger {
 		File file = new File(filePath);
 		try {
 			if (!file.exists()) {
-				if(file.createNewFile()){
-					Log.e(TAG, "Error initializing FileLogger: "+filePath);
+				if (file.createNewFile()) {
+					Log.e(TAG, "Error initializing FileLogger: " + filePath);
 				}
 			}
 			this.writer = new BufferedWriter(new FileWriter(file, true));

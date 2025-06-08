@@ -14,7 +14,7 @@
 		android:id="@+id/timeStampTextView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="time"/>
+		android:text="time" />
 
 	<TextView
 		android:id="@+id/tagTextView"

@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.termux.termxide.databinding.ItemFileBinding;
 import com.termux.termxide.data.ItemFile;
+import com.termux.termxide.databinding.ItemFileBinding;
 
 import java.util.List;
 
@@ -15,14 +15,14 @@ public class ItemFileAdapter extends RecyclerView.Adapter<ItemFileAdapter.FileVi
 
 	List<ItemFile> fileList;
 
-	void setFileList(List<ItemFile> fileList){
+	void setFileList(List<ItemFile> fileList) {
 		this.fileList = fileList;
 	}
 
 	@NonNull
 	@Override
 	public FileViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-		ItemFileBinding binding = ItemFileBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
+		ItemFileBinding binding = ItemFileBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
 		return new FileViewHolder(binding);
 	}
 
@@ -38,12 +38,13 @@ public class ItemFileAdapter extends RecyclerView.Adapter<ItemFileAdapter.FileVi
 
 	public static class FileViewHolder extends RecyclerView.ViewHolder {
 		ItemFileBinding binding;
+
 		public FileViewHolder(@NonNull ItemFileBinding binding) {
 			super(binding.getRoot());
 			this.binding = binding;
 		}
 
-		public void bind(ItemFile file){
+		public void bind(ItemFile file) {
 
 		}
 	}

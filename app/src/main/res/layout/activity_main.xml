@@ -1,16 +1,15 @@
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:gravity="center"
-	android:orientation="vertical" >
+	android:orientation="vertical">
 
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:textSize="30sp"
 		android:layout_marginBottom="30dp"
-		android:text="XIDE"/>
+		android:text="XIDE"
+		android:textSize="30sp" />
 
 	<LinearLayout
 		android:layout_width="wrap_content"
@@ -18,24 +17,40 @@
 		android:orientation="vertical">
 
 		<Button
+			android:id="@+id/file_manager"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="File Manager"/>
+			android:text="File Manager" />
 
 		<Button
+			android:id="@+id/ide"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="IDE"/>
+			android:text="IDE" />
 
 		<Button
+			android:id="@+id/terminal"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Projects"/>
+			android:text="Terminal" />
 
 		<Button
+			android:id="@+id/code_editor"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Exit"/>
+			android:text="Code Editor" />
+
+		<Button
+			android:id="@+id/projects"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Projects" />
+
+		<Button
+			android:id="@+id/exit"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Exit" />
 
 	</LinearLayout>
 

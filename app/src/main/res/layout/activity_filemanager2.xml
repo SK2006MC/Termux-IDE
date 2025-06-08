@@ -41,33 +41,33 @@
 		android:layout_width="200dp"
 		android:layout_height="match_parent"
 		android:layout_gravity="start"
-		app:menu="@menu/menu_filemanager">
+		app:menu="@menu/menu_file_manager">
 
 	</com.google.android.material.navigation.NavigationView>
 
 	<LinearLayout
 		android:layout_width="200dp"
 		android:layout_height="match_parent"
-		android:orientation="vertical"
-		android:layout_gravity="end" >
+		android:layout_gravity="end"
+		android:orientation="vertical">
 
 		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="Teminal"/>
+			android:text="Teminal" />
 
 	</LinearLayout>
 
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="500dp"
-		android:orientation="vertical"
-		android:gravity="bottom">
+		android:gravity="bottom"
+		android:orientation="vertical">
 
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="History"/>
+			android:text="History" />
 
 	</LinearLayout>
 

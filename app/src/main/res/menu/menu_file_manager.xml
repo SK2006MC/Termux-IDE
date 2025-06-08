@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+		android:id="@+id/action_refresh"
+		android:icon="@drawable/baseline_refresh_24"
+		android:title="@string/refresh"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/action_settings"
+		android:title="@string/settings"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/action_about"
+		android:title="@string/about"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/action_logs"
+		android:title="@string/logs"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/action_help"
+		android:title="@string/help"
+		app:showAsAction="ifRoom" />
+</menu>

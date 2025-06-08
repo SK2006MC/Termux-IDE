@@ -1,18 +1,14 @@
 package com.termux.termxide.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.termux.termxide.databinding.ActivityMainBinding;
 import com.termux.termxide.managers.SettingsManager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
-	private static final String TAG = MainActivity.class.getSimpleName();
 	private SettingsManager settingsManager;
 	private ActivityMainBinding binding;
 
@@ -21,39 +17,28 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		settingsManager = new SettingsManager(this);
 
-		// if (settingsManager.getIsFirst()) {
-		// 	startMyActivity(FirstActivity.class);
-		// 	finish();
-		// }
+		 if (settingsManager.getIsFirst()) {
+		 	startMyActivity(FirstActivity.class);
+		 	finish();
+		 }
 
 		binding = ActivityMainBinding.inflate(getLayoutInflater());
 		setContentView(binding.getRoot());
 
-		initializeUI();
-//		initNavView();
-		initOnBackPressed();
-	}
+		binding.fileManager.setOnClickListener(v->startMyActivity(FileManagerActivity.class));
+		binding.codeEditor.setOnClickListener(v->startMyActivity(CodeEditorActivity.class));
+		binding.ide.setOnClickListener(v->startMyActivity(IdeActivity.class));
+		binding.projects.setOnClickListener(v->startMyActivity(ProjectsActivity.class));
+		binding.terminal.setOnClickListener(v->startMyActivity(TerminalActivity.class));
+		binding.exit.setOnClickListener(v->finish());
 
-	private void initializeUI() {
-		
-	}
-
-	public void initOnBackPressed() {
-		getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+		initOnBackPressB(new OnBackPressedCallback(true) {
 			@Override
 			public void handleOnBackPressed() {
-
+				//
 			}
 		});
 	}
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-	}
 
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-	}
 }

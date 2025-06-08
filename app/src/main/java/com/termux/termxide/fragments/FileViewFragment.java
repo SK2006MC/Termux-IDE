@@ -1,13 +1,12 @@
 package com.termux.termxide.fragments;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.termux.termxide.databinding.FragmentFileViewBinding;
 
@@ -15,11 +14,9 @@ public class FileViewFragment extends Fragment {
 
 	private static final String ARG_PARAM1 = "param1";
 	private static final String ARG_PARAM2 = "param2";
-
+	FragmentFileViewBinding binding;
 	private String mParam1;
 	private String mParam2;
-
-	FragmentFileViewBinding binding;
 
 
 	public FileViewFragment() {
@@ -48,7 +45,7 @@ public class FileViewFragment extends Fragment {
 	public View onCreateView(@NonNull LayoutInflater inflater,
 	                         ViewGroup container,
 	                         Bundle savedInstanceState) {
-		binding = FragmentFileViewBinding.inflate(inflater,container,false);
-		return  binding.getRoot();
+		binding = FragmentFileViewBinding.inflate(inflater, container, false);
+		return binding.getRoot();
 	}
 }

@@ -6,34 +6,34 @@
 	android:orientation="vertical"
 	android:padding="8dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_to_termxide"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:text="@string/welcome_to_termxide"
+		android:textSize="24sp"
+		android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/intro1"
-        android:textSize="16sp"
-        android:layout_marginBottom="32dp"/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="32dp"
+		android:text="@string/intro1"
+		android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/btnGrantPermission"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/grant_storage_permission"
-        android:layout_marginBottom="16dp"/>
+	<Button
+		android:id="@+id/btnGrantPermission"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:text="@string/grant_storage_permission" />
 
-    <Button
-        android:id="@+id/btnStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:enabled="false"/>
-	
+	<Button
+		android:id="@+id/btnStart"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:enabled="false"
+		android:text="@string/start" />
+
 
 </LinearLayout>

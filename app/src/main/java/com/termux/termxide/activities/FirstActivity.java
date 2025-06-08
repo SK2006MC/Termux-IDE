@@ -41,31 +41,31 @@ public class FirstActivity extends AppCompatActivity {
 
 		// Register folder picker launcher
 		folderPickerLauncher = registerForActivityResult(
-			new ActivityResultContracts.StartActivityForResult(),
-			result -> {
-				if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-					// Handle picked folder URI
-					Uri folderUri = result.getData().getData();
-					if (folderUri != null) {
-						Toast.makeText(this, "Folder selected: " + folderUri.toString(), Toast.LENGTH_SHORT).show();
-						// Persist permission if needed
-						final int takeFlags = result.getData().getFlags()
-								& (Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-						getContentResolver().takePersistableUriPermission(folderUri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
-						// Save folderUri to settings if needed
-						settingsManager.setHomePath(folderUri.toString());
+				new ActivityResultContracts.StartActivityForResult(),
+				result -> {
+					if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+						// Handle picked folder URI
+						Uri folderUri = result.getData().getData();
+						if (folderUri != null) {
+							Toast.makeText(this, "Folder selected: " + folderUri.toString(), Toast.LENGTH_SHORT).show();
+							// Persist permission if needed
+							final int takeFlags = result.getData().getFlags()
+									& (Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+							getContentResolver().takePersistableUriPermission(folderUri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+							// Save folderUri to settings if needed
+							settingsManager.setHomePath(folderUri.toString());
+						}
+					} else {
+						Toast.makeText(this, "No folder selected", Toast.LENGTH_SHORT).show();
 					}
-				} else {
-					Toast.makeText(this, "No folder selected", Toast.LENGTH_SHORT).show();
 				}
-			}
 		);
 
 		initUi();
 	}
 
-	private void initUi(){
-		binding.btnGrantPermission.setOnClickListener(v->{
+	private void initUi() {
+		binding.btnGrantPermission.setOnClickListener(v -> {
 			if (!isStoragePermissionGranted()) {
 				// For Android 11+ use Storage Access Framework, otherwise request legacy permission
 				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -81,7 +81,7 @@ public class FirstActivity extends AppCompatActivity {
 			}
 		});
 
-		binding.btnStart.setOnClickListener(v->{
+		binding.btnStart.setOnClickListener(v -> {
 			Intent intent = new Intent(this, MainActivity.class);
 			startActivity(intent);
 			finish();
